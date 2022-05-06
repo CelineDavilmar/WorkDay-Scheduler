@@ -14,9 +14,15 @@ document.getElementById('currentDay').innerHTML = current;
 
 for (let i = 0; i < 14; i++) {
     var timeSlots = $('<h3 class="hour">' + hourSlots[i] + '</h3>');
-        timeSlots.appendTo('.container')
+        timeSlots.appendTo('.container');
+
     var timeBlocks = $('<input type="text" name="task" class="time-block" value=""/>');
         timeBlocks.appendTo('.container');
+
+    var saveBtn = $('<button class="saveBtn"> Save </button>');
+        saveBtn.appendTo('.container');
 }
+
+
 
 });
