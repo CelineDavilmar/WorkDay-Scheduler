@@ -4,6 +4,7 @@ var daysofWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Frida
 var month = currentDate.getMonth()+1;
 var date = currentDate.getDate();
 var day = daysofWeek[currentDate.getDay()];
+var currentTime = currentDate.getHours() + ":" + currentDate.getMinutes();
 
 var current = day + ", " + (month<10 ? '0' : '') + month + '/' + (date<10 ? '0' : '') + date + '/' + currentDate.getFullYear();
 var hourSlots = ["9am", "10am", "11am", "noon", "1pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm", "8pm", "9pm"]
@@ -21,8 +22,28 @@ for (let i = 0; i < 14; i++) {
 
     var saveBtn = $('<button class="saveBtn"> Save </button>');
         saveBtn.appendTo('.container');
+
+
+        if (currentTime > hourSlots[i]){
+            console.log(currentTime, hourSlots[i]);
+            $('input').addClass('past');
+        
+        } if (currentTime === hourSlots[i]){
+            $('input').addClass('present');
+        
+        } if (currentTime < hourSlots[i]) {
+            $('input').addClass('future');
+        }
 }
 
-
+$('.saveBtn').click(function () {
+    console.log("clicked");
+    let id = this.hourSlots;
+    console.log(id);
+    let value = $(".time-block").val();
+    console.log(value);
+    localStorage.setItem(id, value);
+} 
+)
 
 });
