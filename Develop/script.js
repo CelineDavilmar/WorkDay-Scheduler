@@ -7,7 +7,18 @@ var day = daysofWeek[currentDate.getDay()];
 var currentTime = currentDate.getHours() + ":" + currentDate.getMinutes();
 
 var current = day + ", " + (month<10 ? '0' : '') + month + '/' + (date<10 ? '0' : '') + date + '/' + currentDate.getFullYear();
-var hourSlots = ["9am", "10am", "11am", "noon", "1pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm", "8pm", "9pm"]
+//Have to incorperate military time to do a loop from 1-24 hrs? Or loop through 12 twice?
+ var hourSlots = [];
+for (let i = 8; i < 12; i++){
+     hourSlots.push(i + ":" + '00' + ' AM');
+};
+hourSlots.push('noon');
+
+for (let i = 1; i < 13; i++){
+    hourSlots.push(i + ':' + '00' + ' PM');
+};
+console.log(hourSlots);
+//var hourSlots = ["9am", "10am", "11am", "noon", "1pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm", "8pm", "9pm"]
 
 $(document).ready(function () {
 
