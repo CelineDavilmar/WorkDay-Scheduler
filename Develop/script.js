@@ -57,14 +57,14 @@ $(document).ready(function () {
         }
 
         saveBtn.click(function () {
-            console.log("clicked");
             let id = startHour + i;
             let value = timeBlocks.val();
             localStorage.setItem(id, value);
-            var tasks = localStorage.getItem(id, value);
-            tasks.push(timeBlocks);
         }
         )
+
+        var tasks = localStorage.getItem(id, value);
+            console.log(tasks);
 
         /* if(!localStorage.getItem(id, value) ){
             $window.localStorage.setItem(value);
