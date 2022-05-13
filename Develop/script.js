@@ -63,8 +63,8 @@ $(document).ready(function () {
         }
         )
 
-        var tasks = localStorage.getItem(id, value);
-            console.log(tasks);
+        /* var tasks = localStorage.getItem(id, value);
+            console.log(tasks); */
 
         /* if(!localStorage.getItem(id, value) ){
             $window.localStorage.setItem(value);
