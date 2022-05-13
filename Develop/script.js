@@ -22,11 +22,11 @@ console.log(hourSlots);
 function convertToHourString(num) {
 
     if (num <= 11) {
-        return num + ":" + '00' + ' AM';
+        return num + 'AM';
     } else if (num === 12) {
-        return num + ":" + '00' + ' PM';
+        return num + 'PM';
     } else {
-        return (num - 12) + ":" + '00' + ' PM';
+        return (num - 12) + 'PM';
     }
 
 }
@@ -39,7 +39,7 @@ $(document).ready(function () {
         let timeSlots = $('<h3 class="hour">' + hourSlots[i] + '</h3>');
         timeSlots.appendTo('.container');
 
-        let timeBlocks = $('<input type="text" name="task" class="time-block" value=""/>');
+        let timeBlocks = $('<textarea type="text" name="task" class="time-block" value=""/>');
         timeBlocks.appendTo('.container');
 
         let saveBtn = $('<button class="saveBtn"> Save </button>');
@@ -59,12 +59,16 @@ $(document).ready(function () {
         saveBtn.click(function () {
             console.log("clicked");
             let id = startHour + i;
-            console.log(id);
             let value = timeBlocks.val();
-            console.log(value);
             localStorage.setItem(id, value);
+            var tasks = localStorage.getItem(id, value);
+            tasks.push(timeBlocks);
         }
         )
+
+        /* if(!localStorage.getItem(id, value) ){
+            $window.localStorage.setItem(value);
+        } */
     }
 
 
