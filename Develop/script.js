@@ -7,7 +7,7 @@ var day = daysofWeek[currentDate.getDay()];
 var currentTime = currentDate.getHours() + ":" + currentDate.getMinutes();
 
 var current = day + ", " + (month < 10 ? '0' : '') + month + '/' + (date < 10 ? '0' : '') + date + '/' + currentDate.getFullYear();
-//Have to incorperate military time to do a loop from 1-24 hrs? Or loop through 12 twice?
+
 var hourSlots = [];
 var startHour = 8;
 var endLength = 20;
@@ -17,7 +17,6 @@ for (let i = startHour; i < endLength; i++) {
 };
 
 console.log(hourSlots);
-//var hourSlots = ["9am", "10am", "11am", "noon", "1pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm", "8pm", "9pm"]
 
 function convertToHourString(num) {
 
@@ -60,11 +59,12 @@ $(document).ready(function () {
             let id = startHour + i;
             let value = timeBlocks.val();
             localStorage.setItem(id, value);
+            localStorage.getItem(key, value)
         }
         )
 
-        /* var tasks = localStorage.getItem(id, value);
-            console.log(tasks); */
+        //var tasks = localStorage.getItem(key, value);
+        //console.log(tasks);
 
         /* if(!localStorage.getItem(id, value) ){
             $window.localStorage.setItem(value);
