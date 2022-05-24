@@ -8,7 +8,7 @@
 HTML CSS JavaScript
 
 # Website
-https://celinedavilmar.github.io/Quizmania/
+https://celinedavilmar.github.io/WorkDay-Scheduler/
 
 # Screenshots of Website
 <img src="./Develop/images/1.png"/>
