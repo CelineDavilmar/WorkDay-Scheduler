@@ -1,6 +1,3 @@
-# Work Day Scheduler Starter Code
-# WorkDay-Scheduler
-
 # Work Day
 
 # Purpose
@@ -14,5 +11,5 @@ HTML CSS JavaScript
 https://celinedavilmar.github.io/Quizmania/
 
 # Screenshots of Website
-<img src="./images/1.png"/>
-<img src="./images/2.png"/>
+<img src="./Develop/images/1.png"/>
+<img src="./Develop/images/2.png"/>
