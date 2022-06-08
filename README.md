@@ -11,5 +11,5 @@ HTML CSS JavaScript
 https://celinedavilmar.github.io/WorkDay-Scheduler/
 
 # Screenshots of Website
-<img src="./Develop/images/1.png"/>
-<img src="./Develop/images/2.png"/>
+<img src="./images/1.png"/>
+<img src="./images/2.png"/>
